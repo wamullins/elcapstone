@@ -57,7 +57,7 @@ const main = async () => {
                 "https://mountainproject.com/assets/photos/climb/106933764_medium_1494152238.jpg?cache=1676684876",
             ],
             camera: {
-                position: [0, -1.6, 4.5],
+                position: [0, -1.5, 4.5],
                 target: [0.41, 0.03, 1.29],
             },
             points: [
