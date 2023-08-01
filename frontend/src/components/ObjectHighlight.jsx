@@ -55,7 +55,7 @@ export const ObjectHighlight = () => {
                 {collection.map((item, idx) => (
                     <Oct key={idx} idx={idx} item={item} /> 
                 ))} 
-                {/* <Octahedron args={[0.1]} position={[-0.08, -0.24, 1.07]} > 
+                {/* <Octahedron args={[0.1]} position={[2.8, 0.6, 1.2]} > 
                     <meshMatcapMaterial transparent color={"green"} opacity={0.6}/>
                 </Octahedron>  */}
             </>

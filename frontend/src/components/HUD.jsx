@@ -53,7 +53,7 @@ export const HUD = () => {
                     : <> Loading objects </>
                 }
             </div>
-            {/* <Clock/> */}
+            <Clock/>
         </div>
         )
     }
