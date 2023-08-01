@@ -6,12 +6,9 @@ passport.use(
     new GoogleStrategy(
         // Configuration object
         {
-            // clientID: process.env.GOOGLE_CLIENT_ID,
-            // clientSecret: process.env.GOOGLE_SECRET,
-            // callbackURL: process.env.GOOGLE_CALLBACK,
-            clientID: "936175628318-lgvoq1sk6c75dpbbnd7o59l3odminrj9.apps.googleusercontent.com",
-            clientSecret: "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",
-            callbackURL: "http://localhost:3001/oauth2callback",
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_SECRET,
+            callbackURL: process.env.GOOGLE_CALLBACK,
         },
         // The verify callback function
         // Let's use async/await!

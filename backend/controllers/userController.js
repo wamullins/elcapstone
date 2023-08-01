@@ -1,5 +1,16 @@
 const { User } = require("../models");
 
+// const addUser = async (req, res) => {
+//     try {
+//         const newUser = new User(req.body);
+//         newUser.save();
+//         return res.json(newUser);
+//     } catch (e) {
+//         console.log(e);
+//         return res.send(e.message);
+//     }
+// };
+
 const addUser = async (req, res) => {
     try {
         const newUser = new User(req.body);
@@ -10,6 +21,7 @@ const addUser = async (req, res) => {
         return res.send(e.message);
     }
 };
+// take password out of request body,
 
 // const getUsers = async (req, res) => {
 //     try {
