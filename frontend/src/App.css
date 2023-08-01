@@ -1,0 +1,321 @@
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV BAR STYLING */
+
+.nav-links {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #645C5C;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.nav-links > * {
+  text-decoration: none;
+  color: white;
+
+}
+
+/* SIGN IN/UP/OUT BOX FORMATTING */
+
+.sign-in-wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url('background_2.jpg');
+  background-size:cover;
+  position: fixed;
+}
+
+.home-title {
+  font-size: 130px;
+  position:fixed;
+  bottom: 10%;
+  left: 10%;
+  z-index: 10;
+  color: white;
+  width: 600px;
+  font-weight: 100;
+}
+
+.sign-in-form, .sign-up-route-body {
+  background-color: #7a7a7ab7;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.sign-in-route-body, .sign-up-route-body {
+  width: 20%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-link {
+  background-color: #f3ecd7a3;
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.sign-in-form > input,label, .sign-up-route-body > input,label {
+  width: 90%;
+  margin: 1%;
+  border-radius: 5px;
+}
+
+.sign-in-form > button, .sign-up-link > button, .sign-up-route-body > button {
+  width: 30%;
+  min-width: 90px;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.sign-out-route {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ACA9A9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* PROFILE PAGE STYING */
+
+.profile-wrapper, .sign-out-wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url('background_1.jpg');
+  position: fixed;
+  background-size: cover;
+}
+
+.profile-route-body {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 90%;
+  transform: translate(-50%);
+  background-color: #d9d9d965;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.profile-header {
+  width: 90%;
+  margin-top: 2%;
+  background-color: #aca9a9c5;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-best { 
+  width: 30%;
+  margin: 1%;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #96B3BA;
+}
+
+.profile-send-log-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 20px;
+  background-color: #a1ba96ad;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+}
+
+.profile-send-log-grid {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 40% 40%;
+}
+
+/* routes and features menus*/
+
+.object-menu {
+  position:fixed;
+  bottom: 10%;
+  left: 10%;
+  z-index: 10;
+  /* color: #f4ddbb; */
+  color: white;
+  width: 20%;
+}
+
+.object-list {
+  min-width: 220px;
+  height: 25vh;
+  background-color: black;
+  overflow-y: scroll;
+  border: 4px solid #242424;
+  border-radius: 8px;
+}
+
+.object-menu-title {
+  font-size: 70px;
+  font-weight: 100;
+}
+
+.object-list-item {
+  background-color: #242424;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* route and features pages */
+
+.object-picture-list {
+  position:fixed;
+  top: 10%;
+  left: 5%;
+  z-index: 9;
+  width: 25%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.object-picture-list > img {
+  border-radius: 8px;
+  margin: 2%;
+}
+
+.object-div {
+  position:fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 10;
+  width: 25%;
+  background-color: #24242456;
+  border-radius: 8px;
+  padding: 1%;
+}
+
+.object-title {
+  font-size: 7vmin;;
+  font-weight: 100;
+  color: white;
+}
+
+.feature-info-div, .route-info-div {
+  background-color: #96b3bae0;
+  height: 40vh;
+  padding: 3%;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.route-info-div {
+  height: 22vh;
+}
+
+/* HUD send log styling */
+
+.route-sec-title {
+  color: white;
+  font-weight: 100;
+  font-size: 3vmin;
+  margin-top: 5px;
+}
+
+.route-send-logs {
+  height: 22vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: #24242456;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.assoc-feat-list {
+  background-color: #24242456;
+  max-height: 12vh;
+  padding: 3%;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.assoc-feat {
+  background-color: #fbaa48ad;
+  padding: 3%;
+  border-radius: 8px;
+  margin: 1%;
+}
+
+
+.submit-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a1ba96ad;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.send-log-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #a1bb96ad;
+  display: flex;
+  overflow-wrap: break-word;
+}
+
+
+
+/* Clock */
+
+.clock-div {
+  position: fixed;
+  z-index: 10;
+  bottom: 10%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: #645c5cb7;;
+  width: 10%;
+}
+
