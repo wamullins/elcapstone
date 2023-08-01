@@ -1,3 +1,4 @@
+require("dotenv").config();
 const db = require("../db");
 const { Climb, Feature, User, SendLog } = require("../models");
 
@@ -320,7 +321,7 @@ const main = async () => {
                 "https://dreaminvertical.files.wordpress.com/2009/10/elcapspire.jpg",
             ],
             camera: {
-                position: [-1.3, 1, 2.3],
+                position: [-1.2, 0.9, 2.2],
                 target: [-0.28, 0.04, 0.79],
             },
             highlight: {
@@ -342,6 +343,40 @@ const main = async () => {
             },
             highlight: {
                 position: [-0.08, -0.24, 1.07],
+            },
+        }),
+        new Feature({
+            name: "ribbon falls",
+            description:
+                "At 1,612ft, this towering, free-falling waterfall is said to be amongst the highest free-leaping waterfalls in the United States. Further inhibiting its notoriety is that it is a seasonal waterfall. Generally, its snow-fed watershed depletes by mid Summer. However, we’ve seen high snow pack years where it remained flowing pretty deep into late June and even July. Conversely, we’ve seen it in low snow pack years where it was almost a trickle by June.",
+            images: [
+                "https://images.world-of-waterfalls.com/Bridalveil_Fall_17_014_06162017-640x427.jpg",
+                "https://images.world-of-waterfalls.com/Ribbon_Falls_004_04232004-640x480.jpg",
+                "https://images.world-of-waterfalls.com/Bridalveil_Fall_17_020_06162017-427x640.jpg",
+            ],
+            camera: {
+                position: [-2.8, 1.7, 2.5],
+                target: [-2.94, 1, -0.87],
+            },
+            highlight: {
+                position: [-2.94, 1.24, -0.87],
+            },
+        }),
+        new Feature({
+            name: "horsetail falls",
+            description:
+                "Horsetail Fall flows over the eastern edge of El Capitan in Yosemite Valley. This small waterfall usually flows only during winter and is easy to miss. On rare occasions during mid- to late February, it can glow orange when it's backlit by sunset. This unique lighting effect happens only on evenings with a clear sky when the waterfall is flowing. Even some haze or minor cloudiness can greatly diminish or eliminate the effect. Although entirely natural, the phenomenon is reminiscent of the human-caused Firefall that historically occurred from Glacier Point.",
+            images: [
+                "https://eloquentnature.files.wordpress.com/2020/01/c6g1760horsetailfall_screensaver.jpg",
+                "https://4yosemite.com/wp-content/uploads/2023/02/Horsetail-Fall-Rockfall-b-scaled.jpg",
+                "https://madera.objects.liquidweb.services/photos/14575-2017-02-16-firefall-day-3-0227-800x600.jpg",
+            ],
+            camera: {
+                position: [3.7, 0.4, 3],
+                target: [2.8, 0.4, 1.2],
+            },
+            highlight: {
+                position: [2.8, 0.6, 1.2],
             },
         }),
     ];
