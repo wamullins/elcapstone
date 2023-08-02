@@ -43,13 +43,6 @@ export const ElCapScene = () => {
         }
     },[selectedObject])
 
-
-    const cameraBox = () => {
-        
-    } 
-
-
-
     return (
         <>
             <primitive useRef={elCap} object={gltf.scene} rotation={[ 0, -Math.PI/3, 0]} scale={7}/>

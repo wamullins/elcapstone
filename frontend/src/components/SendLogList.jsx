@@ -18,12 +18,13 @@ export const SendLogList = () => {
         const getSendLogs = async () => {
             const response = await axios.get(`http://localhost:3001/sendLogs?routeID=${selectedObject._id}`)
             const data = response.data
+            console.log(`http://localhost:3001/sendLogs?routeID=${selectedObject._id}`)
             console.log(data)
             setSendLogs(data)
         }
         getSendLogs()
         
-    }, [axiosAction])
+    }, [axiosAction, selectedObject])
     
     useEffect(() => {
         setAxiosAction(false)
