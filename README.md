@@ -12,11 +12,11 @@ El Capstone is an interactive face of El Capitan that lets users learn about var
 
 ## Images
 
-<img src="/homescreen.png" width="50%">
-<img src="/routespage.png" width="50%">
-<img src="/routepage.png" width="50%">
-<img src="/nightfeature.png" width="50%">
-<img src="/userpage.png" width="50%">
+<img src="imgs/homescreen.png" width="50%">
+<img src="imgs/routespage.png" width="50%">
+<img src="imgs/routepage.png" width="50%">
+<img src="imgs/nightfeature.png" width="50%">
+<img src="imgs/userpage.png" width="50%">
 
 ## Technologies
 
