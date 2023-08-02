@@ -63,7 +63,7 @@ export const ElCapScene = () => {
                 maxPolarAngle={3*Math.PI/4}
                 boundaryEnclosesCamera={true}
             />
-            <hemisphereLight intensity={1}/>
+            <hemisphereLight intensity={0.1}/>
             <mesh position={[9, -1.74, 7.5]} rotation={[-Math.PI/2, 0, -Math.PI/24]}> 
                 <planeGeometry attach="geometry" args={[47.62, 25]} />
                 <meshStandardMaterial map={floorMap} roughness={1}/>
