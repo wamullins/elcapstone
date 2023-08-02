@@ -37,6 +37,15 @@ El Capstone is an interactive face of El Capitan that lets users learn about var
 -   [Wireframe Link](https://www.figma.com/file/G9iycwERjxDzUgm13NrL09/NebulaNav?type=whiteboard&node-id=0-1&t=bBX22sFkUAjfQ8W4-0)
 -   [Deployed Site]()
 
+## Citations
+
+-   El Cap model acquired from [Sketchfab](https://sketchfab.com/3d-models/el-capitan-ec8286fe454a4912805fbc2d80e3e739)
+-   Most route descriptions and pictures were taken from [TheMountainProject](https://www.mountainproject.com/)
+    Additional Information Sources:
+-   [Eurekalert] (https://www.eurekalert.org/multimedia/652406)
+-   [REI] (https://www.rei.com/blog/climb/the-climber-in-the-unicorn-suit)
+-   [FlashPumped] (https://flashpumped.com/blog/the-routes-of-el-capitan/)
+
 ## Contact Me
 
 [Andrew Mullins](https://github.com/wamullins) Email:[mullinsa428@gmail.com](mailto:mullinsa428@gmail.com)
