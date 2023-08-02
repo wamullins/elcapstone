@@ -10,6 +10,14 @@ El Capstone is an interactive face of El Capitan that lets users learn about var
 
 -   **Login**: Sign in to edit previous send logs or personal information.
 
+## Images
+
+<img src="/homescreen.png" width="50%">
+<img src="/routespage.png" width="50%">
+<img src="/routepage.png" width="50%">
+<img src="/nightfeature.png" width="50%">
+<img src="/userpage.png" width="50%">
+
 ## Technologies
 
 -   **React**: A JavaScript library for building user interfaces.

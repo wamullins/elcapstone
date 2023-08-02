@@ -1,16 +1,5 @@
 const { User } = require("../models");
 
-// const addUser = async (req, res) => {
-//     try {
-//         const newUser = new User(req.body);
-//         newUser.save();
-//         return res.json(newUser);
-//     } catch (e) {
-//         console.log(e);
-//         return res.send(e.message);
-//     }
-// };
-
 const addUser = async (req, res) => {
     try {
         const newUser = new User(req.body);
@@ -22,17 +11,6 @@ const addUser = async (req, res) => {
     }
 };
 // take password out of request body,
-
-// const getUsers = async (req, res) => {
-//     try {
-//         const users = await User.find({});
-//         console.log(users);
-//         return res.json(users);
-//     } catch (e) {
-//         console.log(e);
-//         return res.send(e.message);
-//     }
-// };
 
 const getUserByID = async (req, res) => {
     try {

@@ -7,6 +7,7 @@ import SelectedObjectContext from './SelectedObjectContext'
 import AxiosActionContext from './AxiosActionContext'
 import CameraPositionContext from './CameraPositionContext'
 import CollectionContext from './CollectionContext'
+import TimeContext from './TimeContext'
 import { Nav } from './components/Nav'
 import { Explorer } from './components/Explorer'
 import { Profile } from './components/Profile'
@@ -26,6 +27,7 @@ function App() {
     const [ axiosAction, setAxiosAction ] = useState(false)
     const [ cameraPosition, setCameraPosition ] = useState(defaultCamera)
     const [ collection, setCollection ]= useState(null)
+    const [ time, setTime ] = useState('day')
 
     return (
         <LoggedInContext.Provider value={{loggedInUser, setLoggedInUser}}>
@@ -33,18 +35,20 @@ function App() {
                 <AxiosActionContext.Provider value={{axiosAction, setAxiosAction}}>
                     <CameraPositionContext.Provider value={{cameraPosition, setCameraPosition}}>
                         <CollectionContext.Provider value={{collection, setCollection}}>
-                            <div className="app">
-                                <Nav />
-                                <Routes>
-                                    <Route exact path='/' element={<Explorer />} />
-                                    <Route exact path='/climbs' element={<Explorer />} />
-                                    <Route exact path='/features' element={<Explorer />} />
-                                    <Route exact path='/profile' element={<Profile />}/>
-                                    <Route exact path='/signin' element={<SignIn/>}/>
-                                    <Route exact path='/signup' element={<SignUp/>}/>
-                                    <Route exact path='/signout' element={<SignOut/>}/>
-                                </Routes>
-                            </div>
+                            <TimeContext.Provider value={{time, setTime}}>
+                                <div className="app">
+                                    <Nav />
+                                    <Routes>
+                                        <Route exact path='/' element={<Explorer />} />
+                                        <Route exact path='/climbs' element={<Explorer />} />
+                                        <Route exact path='/features' element={<Explorer />} />
+                                        <Route exact path='/profile' element={<Profile />}/>
+                                        <Route exact path='/signin' element={<SignIn/>}/>
+                                        <Route exact path='/signup' element={<SignUp/>}/>
+                                        <Route exact path='/signout' element={<SignOut/>}/>
+                                    </Routes>
+                                </div>
+                            </TimeContext.Provider>
                         </CollectionContext.Provider>
                     </CameraPositionContext.Provider>
                 </AxiosActionContext.Provider>

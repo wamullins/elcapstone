@@ -1,10 +1,11 @@
 import { Suspense, useRef, useContext, useEffect } from 'react'
 import * as THREE from 'three';
-import { CameraControls, Box, Circle } from "@react-three/drei"
+import { CameraControls, Sky, Stars } from "@react-three/drei"
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import CameraPositionContext from '../CameraPositionContext'
 import SelectedObjectContext from '../SelectedObjectContext'
+import TimeContext from '../TimeContext'
 import { ObjectHighlight } from './ObjectHighlight'
 import pic from '../../public/yosemite_top_map.png'
 
@@ -14,6 +15,7 @@ export const ElCapScene = () => {
     const floorMap = useLoader(THREE.TextureLoader, pic)
     const { cameraPosition, setCameraPosition } = useContext(CameraPositionContext)
     const { selectedObject } = useContext(SelectedObjectContext)
+    const { time } = useContext(TimeContext)
     const cameraControlsRef = useRef()
     const elCap = useRef()
 
@@ -63,13 +65,13 @@ export const ElCapScene = () => {
                 maxPolarAngle={3*Math.PI/4}
                 boundaryEnclosesCamera={true}
             />
-            <hemisphereLight intensity={0.1}/>
+            <hemisphereLight intensity={time === 'day' ? 1 : 0.2}/>
             <mesh position={[9, -1.74, 7.5]} rotation={[-Math.PI/2, 0, -Math.PI/24]}> 
                 <planeGeometry attach="geometry" args={[47.62, 25]} />
-                <meshStandardMaterial map={floorMap} roughness={1}/>
+
+                <meshStandardMaterial map={floorMap}/>
             </mesh> 
-            {/* <Circle position={[0, -1.74, 0]} args={[100,0.1,100]}/> */}
-            {/* <spotLight position={[0,7,0]} intensity={1} /> */}
+            {time === 'day' ? <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/> : <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />}
         </>
     )
 }

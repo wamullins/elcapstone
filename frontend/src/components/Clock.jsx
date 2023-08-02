@@ -1,18 +1,40 @@
 import { useContext } from 'react'
-import CameraPositionContext from "../CameraPositionContext"
+import TimeContext from '../TimeContext'
+// import CameraPositionContext from "../CameraPositionContext"
 
 export const Clock = () => { 
 
-    const  moveHereLookThere = {
-        position: [3.7, 0.4, 3],
-        target: [2.8, 0.4, 1.2],
+    const { time, setTime } = useContext(TimeContext)
+
+    const handleClick = () => {
+        if ( time === 'day' ) {
+            setTime('night')
+        } else {
+            setTime('day')
+        }
     }
 
-    const { setCameraPosition } = useContext(CameraPositionContext)
+    const btnStyle = {
+        backgroundColor: time === 'day' ? '#242424': '#fbaa48',
+        color:  time === 'day' ? 'white' : '#242424',
+        borderRadius: '8px',
+        fontSize: '2.2vmin',
+        padding: '12px',
+        fontFamily: 'Montserrat'
+    }
+
+    ///// CODE USED FOR ADDING IN NEW ROUTES AND TESTING CAMERA ANGLES. 
+
+    // const  moveHereLookThere = {
+    //     position: [3.7, 0.4, 3],
+    //     target: [2.8, 0.4, 1.2],
+    // }
+
+    // const { setCameraPosition } = useContext(CameraPositionContext)
 
     return (
         <div className="clock-div">
-            <button onClick={()=> setCameraPosition(moveHereLookThere)}>Move Camera</button>
+            <button style={btnStyle} onClick={handleClick}>{time=== 'day' ? 'night' : 'day' }</button>
         </div>
         
     )
