@@ -34,7 +34,6 @@ El Capstone is an interactive face of El Capitan that lets users learn about var
 
 ## Relevant Links
 
--   [Wireframe Link](https://www.figma.com/file/G9iycwERjxDzUgm13NrL09/NebulaNav?type=whiteboard&node-id=0-1&t=bBX22sFkUAjfQ8W4-0)
 -   [Deployed Site]()
 
 ## Citations
