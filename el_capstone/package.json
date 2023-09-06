@@ -9,15 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pmndrs/assets": "^1.6.0",
+    "@react-three/drei": "^9.78.1",
+    "@react-three/fiber": "^8.13.4",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@types/three": "^0.153.0",
+    "axios": "^1.4.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.15",
+    "mongoose": "^7.4.1",
     "next": "13.4.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "three": "^0.154.0",
     "typescript": "5.1.6",
-    "mongoose": "^7.4.1"
+    "zustand": "^4.4.1"
   }
 }
