@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react"
 import axios from 'axios'
 import LoggedInContext from "../LoggedInContext"
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const ProfileHeader = () => {
 

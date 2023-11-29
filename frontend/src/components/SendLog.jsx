@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const SendLog = ({ log }) => {
 

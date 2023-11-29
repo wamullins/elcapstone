@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const SignUp = () => {
 

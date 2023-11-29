@@ -1,7 +1,7 @@
 import AxiosActionContext from "../AxiosActionContext"
 import { useContext, useState, useEffect } from "react"
 import axios from 'axios'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 
 export const ProfileSendLog = ({ log }) => {

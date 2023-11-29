@@ -6,7 +6,7 @@ import CollectionContext from "../CollectionContext"
 import { SendLogList } from "./SendLogList"
 import { FeatureList } from "./FeatureList"
 import { Clock } from './Clock'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const HUD = () => {
     let location = useLocation().pathname;
@@ -22,7 +22,7 @@ export const HUD = () => {
         }
 
         const getCollection = async () => {
-            const response = await axios.get(`http://localhost:3001${location}`)
+            const response = await axios.get(`${API}${location}`)
             const data = response.data
             console.log(data)
             setCollection(data)

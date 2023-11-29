@@ -4,7 +4,7 @@ import LoggedInContext from "../LoggedInContext"
 import AxiosActionContext from '../AxiosActionContext'
 import { ProfileHeader } from "./ProfileHeader"
 import { ProfileSendLog } from "./ProfileSendLog"
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 
 export const Profile = () => {

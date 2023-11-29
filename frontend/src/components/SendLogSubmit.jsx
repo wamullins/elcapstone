@@ -3,7 +3,7 @@ import { useState, useContext } from 'react'
 import SelectedObjectContext from '../SelectedObjectContext'
 import AxiosActionContext from '../AxiosActionContext'
 import LoggedInContext from '../LoggedInContext'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const SendLogSubmit = () => {
 

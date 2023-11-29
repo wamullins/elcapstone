@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
 import LoggedInContext from '../LoggedInContext'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 
 export const SignIn = () => {

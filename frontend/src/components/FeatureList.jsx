@@ -3,7 +3,7 @@ import { useNavigate  } from 'react-router-dom'
 import axios from 'axios'
 import SelectedObjectContext from "../SelectedObjectContext"
 import CollectionContext from "../CollectionContext"
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 export const FeatureList = () => {
 

@@ -5,7 +5,7 @@ import AxiosActionContext from '../AxiosActionContext'
 import LoggedInContext from '../LoggedInContext'
 import { SendLog } from "./SendLog"
 import { SendLogSubmit } from './SendLogSubmit'
-import { API } from "@/lib"
+import { API } from "../../lib"
 
 
 export const SendLogList = () => {
