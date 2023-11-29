@@ -1,1 +1,1 @@
-export const API = process.env.API_URL;
+export const API = import.meta.env.API_URL;

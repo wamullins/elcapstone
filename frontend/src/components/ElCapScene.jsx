@@ -11,7 +11,7 @@ import pic from '../assets/yosemite_top_map.png'
 
 export const ElCapScene = () => {
 
-    const gltf = useLoader(GLTFLoader, '../assets/el_capitan/scene.gltf')
+    const gltf = useLoader(GLTFLoader, '/el_capitan/scene.gltf')
     const floorMap = useLoader(THREE.TextureLoader, pic)
     const { cameraPosition, setCameraPosition } = useContext(CameraPositionContext)
     const { selectedObject } = useContext(SelectedObjectContext)
