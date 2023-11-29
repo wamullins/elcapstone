@@ -3,6 +3,7 @@ import { useState, useContext } from 'react'
 import SelectedObjectContext from '../SelectedObjectContext'
 import AxiosActionContext from '../AxiosActionContext'
 import LoggedInContext from '../LoggedInContext'
+import { API } from "@/lib"
 
 export const SendLogSubmit = () => {
 
@@ -30,7 +31,7 @@ export const SendLogSubmit = () => {
 
     const handleSubmit = async () => {
         try {
-            await axios.post(`http://localhost:3001/sendlogs/`, submitFormState)
+            await axios.post(`${API}/sendlogs/`, submitFormState)
             setEditMode(false)
             setAxiosAction(true)
         } catch (error) {

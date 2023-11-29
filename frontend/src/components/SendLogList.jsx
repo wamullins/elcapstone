@@ -5,6 +5,7 @@ import AxiosActionContext from '../AxiosActionContext'
 import LoggedInContext from '../LoggedInContext'
 import { SendLog } from "./SendLog"
 import { SendLogSubmit } from './SendLogSubmit'
+import { API } from "@/lib"
 
 
 export const SendLogList = () => {
@@ -16,9 +17,9 @@ export const SendLogList = () => {
     
     useEffect(() => {
         const getSendLogs = async () => {
-            const response = await axios.get(`http://localhost:3001/sendLogs?routeID=${selectedObject._id}`)
+            const response = await axios.get(`${API}/sendLogs?routeID=${selectedObject._id}`)
             const data = response.data
-            console.log(`http://localhost:3001/sendLogs?routeID=${selectedObject._id}`)
+            console.log(`${API}/sendLogs?routeID=${selectedObject._id}`)
             console.log(data)
             setSendLogs(data)
         }

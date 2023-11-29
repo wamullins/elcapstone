@@ -3,6 +3,7 @@ import { useNavigate  } from 'react-router-dom'
 import axios from 'axios'
 import SelectedObjectContext from "../SelectedObjectContext"
 import CollectionContext from "../CollectionContext"
+import { API } from "@/lib"
 
 export const FeatureList = () => {
 
@@ -14,7 +15,7 @@ export const FeatureList = () => {
 
     useEffect(() => {
         const getFeatures = async () => {
-            const response = await axios.get(`http://localhost:3001/features?climbID=${selectedObject._id}`)
+            const response = await axios.get(`${API}/features?climbID=${selectedObject._id}`)
             const data = response.data
             console.log(data)
             setFeatures(data)

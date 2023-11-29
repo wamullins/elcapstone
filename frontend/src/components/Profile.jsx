@@ -4,6 +4,7 @@ import LoggedInContext from "../LoggedInContext"
 import AxiosActionContext from '../AxiosActionContext'
 import { ProfileHeader } from "./ProfileHeader"
 import { ProfileSendLog } from "./ProfileSendLog"
+import { API } from "@/lib"
 
 
 export const Profile = () => {
@@ -13,7 +14,7 @@ export const Profile = () => {
 
     useEffect(() => {
         const getSendLogs = async () => {
-            const response = await axios.get(`http://localhost:3001/sendLogs?userID=${loggedInUser._id}`)
+            const response = await axios.get(`${API}/sendLogs?userID=${loggedInUser._id}`)
             const data = response.data
             setSendLogs(data)
         }

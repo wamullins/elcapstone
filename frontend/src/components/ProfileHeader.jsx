@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react"
 import axios from 'axios'
 import LoggedInContext from "../LoggedInContext"
+import { API } from "@/lib"
 
 export const ProfileHeader = () => {
 
@@ -22,7 +23,7 @@ export const ProfileHeader = () => {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:3001/users/${loggedInUser._id}`, updateState)
+            await axios.put(`${API}/users/${loggedInUser._id}`, updateState)
             setEditMode(false)
             setLoggedInUser({...loggedInUser, ...updateState})
         } catch (error) {

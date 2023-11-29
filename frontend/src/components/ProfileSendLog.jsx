@@ -1,6 +1,7 @@
 import AxiosActionContext from "../AxiosActionContext"
 import { useContext, useState, useEffect } from "react"
 import axios from 'axios'
+import { API } from "@/lib"
 
 
 export const ProfileSendLog = ({ log }) => {
@@ -18,7 +19,7 @@ export const ProfileSendLog = ({ log }) => {
 
     useEffect(() => {
         const getRoute = async () => {
-            const response = await axios.get(`http://localhost:3001/climbs/${log.routeID}`)
+            const response = await axios.get(`${API}/climbs/${log.routeID}`)
             const data = response.data
             setRoute(data)
         }
@@ -31,7 +32,7 @@ export const ProfileSendLog = ({ log }) => {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:3001/sendlogs/${log._id}`, updateState)
+            await axios.put(`${API}/sendlogs/${log._id}`, updateState)
             setEditMode(false)
             setAxiosAction(true)
         } catch (error) {
@@ -41,7 +42,7 @@ export const ProfileSendLog = ({ log }) => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3001/sendlogs/${log._id}`)
+            await axios.delete(`${API}/sendlogs/${log._id}`)
             setAxiosAction(true)
             setEditMode(false)
         } catch (error) {

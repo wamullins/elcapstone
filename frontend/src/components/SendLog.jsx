@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { API } from "@/lib"
 
 export const SendLog = ({ log }) => {
 
@@ -7,7 +8,7 @@ export const SendLog = ({ log }) => {
 
     useEffect(() => {
         const getUser = async () => {
-            const response = await axios.get(`http://localhost:3001/users/${log.userID}`)
+            const response = await axios.get(`${API}/users/${log.userID}`)
             const data = response.data
             console.log(data)
             setUser(data)

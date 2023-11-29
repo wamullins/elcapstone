@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { API } from "@/lib"
 
 export const SignUp = () => {
 
@@ -17,7 +18,7 @@ export const SignUp = () => {
     // get all existing user emails. This will be used in teh handle sign up function
     useEffect(() => {
         const getEmails = async () => {
-            const response = await axios.get('http://localhost:3001/users/emails')
+            const response = await axios.get(`${API}/users/emails`)
             const data = response.data
             setUserEmails(data)
         }
@@ -50,7 +51,7 @@ export const SignUp = () => {
             return
         }
         
-        await axios.post(`http://localhost:3001/users/`, {
+        await axios.post(`${API}/users/`, {
                 name: signUpFormState.name,
                 email: signUpFormState.email,
                 gradePB: '',

@@ -6,6 +6,7 @@ import CollectionContext from "../CollectionContext"
 import { SendLogList } from "./SendLogList"
 import { FeatureList } from "./FeatureList"
 import { Clock } from './Clock'
+import { API } from "@/lib"
 
 export const HUD = () => {
     let location = useLocation().pathname;

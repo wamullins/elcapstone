@@ -2,6 +2,9 @@ import { useState, useContext, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
 import LoggedInContext from '../LoggedInContext'
+import { API } from "@/lib"
+
+
 export const SignIn = () => {
 
     const default_input = {
@@ -16,7 +19,7 @@ export const SignIn = () => {
 
     // useEffect(() => {
     //     const getLoggedInUser = async () => {
-    //         const response = await axios.get('http://localhost:3001/users/64c1a7596257b2f5fe9a6392')
+    //         const response = await axios.get('${API}/users/64c1a7596257b2f5fe9a6392')
     //         const data = response.data
     //         console.log(data.name)
     //         setLoggedInUser(data)
@@ -33,7 +36,7 @@ export const SignIn = () => {
 
         const findUser = async () => {
             // check email assocaited account exists in database
-            const response = await axios.get(`http://localhost:3001/users?email=${loginState.email}`)
+            const response = await axios.get(`${API}/users?email=${loginState.email}`)
             if (!response.data[0]) {
                 alert("email not found")
                 return
