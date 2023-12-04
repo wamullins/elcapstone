@@ -13,7 +13,7 @@ require("./config/passport");
 // require() imports and middleware here ^ ///////
 
 const corsOptions = {
-    origin: ["https://el-capstone.vercel.app", "http://localhost:5173"],
+    origin: "*",
     methods: "GET,PUT,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
 };
