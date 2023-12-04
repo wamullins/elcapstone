@@ -15,7 +15,7 @@ require("./config/passport");
 const corsOptions = {
     origin: "*",
     methods: "GET,PUT,POST,DELETE",
-    allowedHeaders: "Content-Type,Authorization",
+    // allowedHeaders: "Content-Type,Authorization",
 };
 
 const PORT = process.env.PORT || 3001;
