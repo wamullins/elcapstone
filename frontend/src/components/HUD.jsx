@@ -22,6 +22,7 @@ export const HUD = () => {
         }
 
         const getCollection = async () => {
+            console.log(API)
             const response = await axios.get(`${API}${location}`)
             const data = response.data
             console.log(data)
